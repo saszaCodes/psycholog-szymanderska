@@ -15,8 +15,7 @@ export default function SasTherapy() {
   useEffect(() => {
     switch (location.hash) {
       case "#sas-therapy":
-        // scrollIntoView(true): true is a value of a boolean argument alignToTop, which fixes issues with mobile version not scrolling properlny on hash change
-        sasTherapyRef.current.scrollIntoView(true);
+        sasTherapyRef.current.scrollIntoView();
         break;
       default:
         console.log("Unhandled hash");
@@ -73,38 +72,34 @@ export default function SasTherapy() {
           Trzy filary, na których opiera się Terapia SAS to Szacunek, Akceptacja
           i Siła.
         </p>
-        <InlineImage imgSource={respectImage} titleText={<h6>Szacunek</h6>} />
+        <InlineImage
+          imgSource={respectImage}
+          titleText={<h6>Szacunek</h6>}
+        />
         <p>
           <b>Szacunek</b> w Terapii SAS ma dwa znaczenia:
           <br />
           <br />
-          Pierwsze mówi o{" "}
-          <b>
-            obdarzaniu szacunkiem siebie i innych nie za to “jaki jestem”, lecz
-            dlatego, “że jestem”
-          </b>
-          . Czasownik “jestem” opisuje to co w nas najbardziej podstawowe,
-          uniwersalne i wspólne. To synonim dla “żyję” “istnieję”. Istnienie to
-          niepodlegająca krytyce ani ocenie wartość, która jest wspólna i
-          jednakowa dla wszystkich. Jej uszanowanie oznacza dostrzeżenie jej w
-          sobie i innych jako równie dobrej i ważnej, a to z kolei prowadzi do
-          uwolnienia się spod presji oceniania i krytyki.
+          Pierwsze mówi o <b>obdarzaniu szacunkiem siebie i innych nie za to “jaki
+          jestem”, lecz dlatego, “że jestem”</b>. Czasownik “jestem” opisuje to co w
+          nas najbardziej podstawowe, uniwersalne i wspólne. To synonim dla
+          “żyję” “istnieję”. Istnienie to niepodlegająca krytyce ani ocenie
+          wartość, która jest wspólna i jednakowa dla wszystkich. Jej
+          uszanowanie oznacza dostrzeżenie jej w sobie i innych jako równie
+          dobrej i ważnej, a to z kolei prowadzi do uwolnienia się spod presji
+          oceniania i krytyki.
           <br />
           <br />
-          Drugi aspekt szacunku to{" "}
-          <b>
-            uznanie odrębności drugiego człowieka i jego prawa do własnych
-            wyborów i decyzji
-          </b>
-          . Czyli zgoda na to, że jesteśmy różni. Każdy z nas ma prawo być taki,
-          jaki jest i jakim chce być. Ma prawo do decydowania o swoim istnieniu.
-          Każdy ma prawo do dokonywania własnych wyborów, do brania za nie
-          odpowiedzialności i do ponoszenia ich konsekwencji. Tak, to nie
-          pomyłka. Branie odpowiedzialności i ponoszenie konsekwencji jest
-          prawem i przywilejem a nie dopustem bożym. Dostrzeżenie, zrozumienie i
-          uszanowanie wartości jaką jest odrębność i odpowiedzialność za nią, w
-          równym stopniu u siebie jak u innych, prowadzi do osiągnięcia
-          wewnętrznej wolności i niezależności.
+          Drugi aspekt szacunku to <b>uznanie odrębności drugiego człowieka i jego
+          prawa do własnych wyborów i decyzji</b>. Czyli zgoda na to, że jesteśmy
+          różni. Każdy z nas ma prawo być taki, jaki jest i jakim chce być. Ma
+          prawo do decydowania o swoim istnieniu. Każdy ma prawo do dokonywania
+          własnych wyborów, do brania za nie odpowiedzialności i do ponoszenia
+          ich konsekwencji. Tak, to nie pomyłka. Branie odpowiedzialności i
+          ponoszenie konsekwencji jest prawem i przywilejem a nie dopustem
+          bożym. Dostrzeżenie, zrozumienie i uszanowanie wartości jaką jest
+          odrębność i odpowiedzialność za nią, w równym stopniu u siebie jak u
+          innych, prowadzi do osiągnięcia wewnętrznej wolności i niezależności.
         </p>
         <InlineImage
           imgSource={acceptanceImage}
@@ -112,22 +107,21 @@ export default function SasTherapy() {
         />
         <p>
           <b>Akceptacja</b> to droga do zmiany prowadząca poprzez zgodę na świat
-          takim, jakim on jest w danym momencie. Poprzez{" "}
-          <b>zgodę na siebie takim, jakim jesteś w danym momencie</b>. Przy
-          maksymalnym zredukowaniu ilości filtrów zniekształcających oglądany
-          obraz. Poprzez uczciwe zobaczenie tego co ci się podoba i nie podoba.{" "}
-          <b>
-            To, co ci się w tobie nie podoba możesz zmienić, ale tylko jeśli to
-            dostrzegasz.
-          </b>{" "}
-          Nie możesz zmienić czegoś przed czym uciekasz, czy udajesz, że nie
-          istnieje, „zamykając na to oczy”, stosując filtry, dlatego zgoda na
-          świat taki, jaki w danej chwili widzisz, jest podstawą dokonania
-          zmiany. Zmiana jest tym skuteczniejsza i bardziej udana, im lepiej
-          znasz to, co chcesz zmienić. Terapia SAS uczy dokonywania zmian
-          opartych na akceptacji.
+          takim, jakim on jest w danym momencie. Poprzez <b>zgodę na siebie takim,
+          jakim jesteś w danym momencie</b>. Przy maksymalnym zredukowaniu ilości
+          filtrów zniekształcających oglądany obraz. Poprzez uczciwe zobaczenie
+          tego co ci się podoba i nie podoba. <b>To, co ci się w tobie nie podoba
+          możesz zmienić, ale tylko jeśli to dostrzegasz.</b> Nie możesz zmienić
+          czegoś przed czym uciekasz, czy udajesz, że nie istnieje, „zamykając na
+          to oczy”, stosując filtry, dlatego zgoda na świat taki, jaki w danej
+          chwili widzisz, jest podstawą dokonania zmiany. Zmiana jest tym
+          skuteczniejsza i bardziej udana, im lepiej znasz to, co chcesz
+          zmienić. Terapia SAS uczy dokonywania zmian opartych na akceptacji.
         </p>
-        <InlineImage imgSource={strengthImage} titleText={<h6>Siła</h6>} />
+        <InlineImage
+          imgSource={strengthImage}
+          titleText={<h6>Siła</h6>}
+        />
         <p>
           <b>Siła</b> jest konsekwencją przyjęcia Szacunku i Akceptacji w wyżej
           opisanych znaczeniach. Przejawia się w wewnętrznym poczuciu
@@ -140,24 +134,20 @@ export default function SasTherapy() {
         />
         <p>
           Wewnętrzne zintegrowanie tak rozumianych: Szacunku, Akceptacji i Siły
-          prowadzi do odczuwania wewnętrznej miłości.{" "}
-          <b>
-            Wewnętrzna miłość to przeciwieństwo lęku, stresu, niepewności,
-            depresji.
-          </b>{" "}
-          To odnalezienie siebie samego i własnej drogi przez życie. To poczucie
-          własnej wartości, poczucie bezpieczeństwa, sympatia do otaczającego
-          świata i siebie w nim.Terapia SAS prowadzi do osiągnięcia wewnętrznej
-          harmonii, do radosnego obcowania z samym sobą i rozpościerającą się
-          wokół rzeczywistością.
+          prowadzi do odczuwania wewnętrznej miłości. <b>Wewnętrzna miłość to
+          przeciwieństwo lęku, stresu, niepewności, depresji.</b> To odnalezienie
+          siebie samego i własnej drogi przez życie. To poczucie własnej
+          wartości, poczucie bezpieczeństwa, sympatia do otaczającego świata i
+          siebie w nim.Terapia SAS prowadzi do osiągnięcia wewnętrznej harmonii,
+          do radosnego obcowania z samym sobą i rozpościerającą się wokół
+          rzeczywistością.
         </p>
         <h5 className="my-2">Sesje</h5>
         <p>
-          <b>Podstawowym narzędziem psychoterapeuty jest rozmowa.</b> W Terapii
-          SAS korzystam także z innych możliwości jakie daje płynne połączenie
-          różnych podejść. Są to m.in. <b>wizualizacje</b>, <b>trans</b>,{" "}
-          <b>techniki projekcyjne</b>, <b>wchodzenie w doświadczanie</b>,{" "}
-          <b>ustawienia systemowe</b>.
+          <b>Podstawowym narzędziem psychoterapeuty jest rozmowa.</b> W Terapii SAS
+          korzystam także z innych możliwości jakie daje płynne połączenie
+          różnych podejść. Są to m.in. <b>wizualizacje</b>, <b>trans</b>, <b>techniki
+          projekcyjne</b>, <b>wchodzenie w doświadczanie</b>, <b>ustawienia systemowe</b>.
           <br />
           Czas trwania terapii może być różny, w zależności od zgłaszanych
           problemów i chęci pogłębiania pracy nad sobą klienta. Terapia

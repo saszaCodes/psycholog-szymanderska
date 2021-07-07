@@ -1,5 +1,7 @@
 import "../styles.css";
 import { Image, Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
+import { Link } from 'react-router-dom';
+import mainImg from "../assets/glowne.jpg";
 
 export default function DesktopTitleScreen() {
   return (
@@ -7,7 +9,7 @@ export default function DesktopTitleScreen() {
       <Image
         className="DesktopTitleScreenImg shadow"
         style={{ objectFit: "cover" }}
-        src="https://i2.wp.com/szymanderska.pl/wp-content/uploads/2017/11/glowne-127.jpg?w=1932"
+        src={mainImg}
       />
       <div className="fixed-bottom ">
         <Navbar
@@ -16,23 +18,37 @@ export default function DesktopTitleScreen() {
         >
           <Container className="">
             <Nav className="">
-              <Nav.Link href="/sas-therapy#sas-therapy">Terapia SAS</Nav.Link>
-              <Nav.Link href="/about-me#about-me">O mnie</Nav.Link>
+              <Nav.Link>
+                <Link to="/sas-therapy#sas-therapy">Terapia SAS</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to="/about-me#about-me">O mnie</Link>
+              </Nav.Link>
               <NavDropdown title="Oferta" drop="up">
-                <NavDropdown.Item href="/offer#offer-psychotherapy">
-                  Psychoterapia
+                <NavDropdown.Item>
+                  <Link to="/offer#offer-psychotherapy">
+                    Psychoterapia
+                  </Link>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/offer#offer-system">
-                  Ustawienia systemowe
+                <NavDropdown.Item>
+                  <Link to="/offer#offer-system">
+                    Ustawienia systemowe
+                  </Link>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/offer#offer-for-parents">
-                  Psycholog dla rodziców
+                <NavDropdown.Item>
+                  <Link to="/offer#offer-for-parents">
+                    Psycholog dla rodziców
+                  </Link>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/offer#offer-couples-therapy">
-                  Terapia par
+                <NavDropdown.Item>
+                  <Link to="/offer#offer-couples-therapy">
+                    Terapia par
+                  </Link>
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="/contact#contact">Kontakt</Nav.Link>
+              <Nav.Link>
+                <Link to="/contact#contact">Kontakt</Link>
+              </Nav.Link>
             </Nav>
           </Container>
         </Navbar>

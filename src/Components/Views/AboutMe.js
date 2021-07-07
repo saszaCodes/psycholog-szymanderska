@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { Container, Col, Image } from "react-bootstrap";
 import "../../styles.css";
-import aboutMeImage from "../../assets/psycholog-szymanderska-photo-small.png";
+import aboutMeImage from "../../assets/psycholog-szymanderska-photo-small.png"
 
 export default function AboutMe() {
   const location = useLocation();
@@ -11,8 +11,7 @@ export default function AboutMe() {
   useEffect(() => {
     switch (location.hash) {
       case "#about-me":
-        // scrollIntoView(true): true is a value of a boolean argument alignToTop, which fixes issues with mobile version not scrolling properlny on hash change
-        aboutMeRef.current.scrollIntoView(true);
+        aboutMeRef.current.scrollIntoView();
         break;
       default:
         console.log("Unhandled hash");

@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { Container, Col, Row, Image } from "react-bootstrap";
 import "../../styles.css";
-import contactImage from "../../assets/kontakt-psycholog.png";
+import contactImage from "../../assets/kontakt-psycholog.png"
 
 export default function Contact() {
   const location = useLocation();
@@ -11,8 +11,7 @@ export default function Contact() {
   useEffect(() => {
     switch (location.hash) {
       case "#contact":
-        // scrollIntoView(true): true is a value of a boolean argument alignToTop, which fixes issues with mobile version not scrolling properlny on hash change
-        contactRef.current.scrollIntoView(true);
+        contactRef.current.scrollIntoView();
         break;
       default:
         console.log("Unhandled hash");
@@ -37,7 +36,10 @@ export default function Contact() {
             </p>
           </Col>
           <Col xs={4} md={2} className="m-auto d-none d-md-block">
-            <Image className="w-100 float-right" src={contactImage} />
+            <Image
+              className="w-100 float-right"
+              src={contactImage}
+            />
           </Col>
         </Row>
         <h5 className="my-2">Jak do mnie dojechać?</h5>

@@ -1,12 +1,12 @@
 import { useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { Container, Col, ListGroup } from "react-bootstrap";
 import "../../styles.css";
 import InlineImage from "../Misc/InlineImage";
-import offerPsychotherapyImage from "../../assets/psychoterapia.png";
-import offerSystemImage from "../../assets/terapia-systemowa.png";
-import offerCouplesTherapyImage from "../../assets/terapia-par.png";
-import offerForParentsImage from "../../assets/dla-rodzicow.png";
+import offerPsychotherapyImage from "../../assets/psychoterapia.png"
+import offerSystemImage from "../../assets/terapia-systemowa.png"
+import offerCouplesTherapyImage from "../../assets/terapia-par.png"
+import offerForParentsImage from "../../assets/dla-rodzicow.png"
 
 export default function Offer() {
   const location = useLocation();
@@ -17,22 +17,21 @@ export default function Offer() {
   const offerCouplesTherapyRef = useRef();
 
   useEffect(() => {
-    // scrollIntoView(true): true is a value of a boolean argument alignToTop, which fixes issues with mobile version not scrolling properlny on hash change
     switch (location.hash) {
       case "#offer":
-        offerRef.current.scrollIntoView(true);
+        offerRef.current.scrollIntoView();
         break;
       case "#offer-psychotherapy":
-        offerPsychotherapyRef.current.scrollIntoView(true);
+        offerPsychotherapyRef.current.scrollIntoView();
         break;
       case "#offer-system":
-        offerSystemRef.current.scrollIntoView(true);
+        offerSystemRef.current.scrollIntoView();
         break;
       case "#offer-for-parents":
-        offerForParentsRef.current.scrollIntoView(true);
+        offerForParentsRef.current.scrollIntoView();
         break;
       case "#offer-couples-therapy":
-        offerCouplesTherapyRef.current.scrollIntoView(true);
+        offerCouplesTherapyRef.current.scrollIntoView();
         break;
       default:
         console.log("Unhandled hash");
@@ -47,22 +46,22 @@ export default function Offer() {
         </h1>
         {/* LISTGROUP ONLY ON MOBILE */}
         <ListGroup className="d-block d-md-none mb-4">
-          <a href="#offer-psychotherapy">
+          <Link to="#offer-psychotherapy">
             <ListGroup.Item variant="light">Psychoterapia</ListGroup.Item>
-          </a>
-          <a href="#offer-system">
+          </Link>
+          <Link to="#offer-system">
             <ListGroup.Item variant="light">
               Ustawienia systemowe
             </ListGroup.Item>
-          </a>
-          <a href="#offer-for-parents">
+          </Link>
+          <Link to="#offer-for-parents">
             <ListGroup.Item variant="light">
               Psycholog dla rodziców
             </ListGroup.Item>
-          </a>
-          <a href="#offer-couples-therapy">
+          </Link>
+          <Link to="#offer-couples-therapy">
             <ListGroup.Item variant="light">Terapia par</ListGroup.Item>
-          </a>
+          </Link>
         </ListGroup>
         <InlineImage
           reference={offerPsychotherapyRef}
@@ -133,9 +132,9 @@ export default function Offer() {
           nawet z najtrudniejszych sytuacji. Prowadzę indywidualną terapię
           krótko- i długoterminową polegającą na regularnych spotkaniach
           zazwyczaj raz w tygodniu. Zapraszam również na indywidualne sesje{" "}
-          <a style={{ textDecoration: "underline" }} href="#offer-system">
+          <Link style={{ textDecoration: "underline" }} href="#offer-system">
             ustawień systemowych
-          </a>
+          </Link>
           .
         </p>
         <h6>Jak pracuje psychoterapeuta</h6>
@@ -212,13 +211,10 @@ export default function Offer() {
           “wykluczonych” bo każdy uczciwie bierze na siebie co do niego należy i
           nie obciąża tym kolejnych krewnych. Gdy tak się dzieje, nie ma nikogo
           do kogo inni mogą mieć o cokolwiek żal, a miłość może przepływać
-          swobodnie.{" "}
-          <b>
-            Efektem dla konkretnej osoby jest uwolnienie od niechcianych emocji
-          </b>
-          , zrozumienie (i idąca za nim możliwość wyeliminowania) trudności
-          życiowych i otwierająca się perspektywa bycia szczęśliwym w swoim
-          życiu.
+          swobodnie. <b>Efektem dla konkretnej osoby jest uwolnienie od
+          niechcianych emocji</b>, zrozumienie (i idąca za nim możliwość
+          wyeliminowania) trudności życiowych i otwierająca się perspektywa
+          bycia szczęśliwym w swoim życiu.
         </p>
         <h6>Jak w praktyce wygląda ich stosowanie</h6>
         <p>
@@ -262,25 +258,18 @@ export default function Offer() {
           Czasem nie potrafisz zapanować nad nerwami, a potem masz poczucie winy
           za swoje zachowanie. Czasem niepokoi cię zachowanie twojego dziecka i
           nie wiesz czy to z nim jest “coś nie tak” czy może ty popełniasz
-          jakieś błędy.{" "}
-          <b>
-            Moja pomoc skierowana jest na podnoszenie kompetencji
-            rodzicielskich. Rodzic czujący się pewnie w swojej roli potrafi
-            dawać to czego dziecko najbardziej potrzebuje – miłość i poczucie
-            bezpieczeństwa.
-          </b>
+          jakieś błędy. <b>Moja pomoc skierowana jest na podnoszenie kompetencji
+          rodzicielskich. Rodzic czujący się pewnie w swojej roli potrafi dawać to
+          czego dziecko najbardziej potrzebuje – miłość i poczucie
+          bezpieczeństwa.</b>
         </p>
         <p>
           Wychowywanie dzieci to zadanie, które daje radość, ale bywa też
           wyzwaniem wywołującym silne reakcje emocjonalne, czasem trudne i
-          nieprzyjemne.{" "}
-          <b>
-            Tak jak w każdej dziedzinie życia, w rodzicielstwie także można się
-            pogubić.
-          </b>{" "}
-          Ważne jest aby, będąc rodzicem, rozumieć z czego wynikają zachowania
-          dzieci, co one znaczą i jak na nie reagować, aby osiągnąć zamierzony
-          efekt.
+          nieprzyjemne. <b>Tak jak w każdej dziedzinie życia, w rodzicielstwie
+          także można się pogubić.</b> Ważne jest aby, będąc rodzicem, rozumieć z
+          czego wynikają zachowania dzieci, co one znaczą i jak na nie reagować,
+          aby osiągnąć zamierzony efekt.
         </p>
         <h6>Kiedy warto zwrócić się po pomoc?</h6>
         <ul>
@@ -323,10 +312,8 @@ export default function Offer() {
         <p>
           Spotkania z rodzicami (jednym lub obojgiem) to raczej coaching,
           doradztwo, nie terapia. Prowadzę je zgodnie z zasadami Terapii SAS.
-          <b>
-            Rodzice dzięki odnalezieniu wewnętrznego szacunku, akceptacji i siły
-            poszerzają i utrwalają swoje rodzicielskie kompetencje.
-          </b>
+          <b>Rodzice dzięki odnalezieniu wewnętrznego szacunku, akceptacji i siły
+          poszerzają i utrwalają swoje rodzicielskie kompetencje.</b>
         </p>
         <p>
           Ilość i częstotliwość spotkań ustalana jest ze względu na indywidualne
@@ -339,22 +326,16 @@ export default function Offer() {
           titleText={<h5>Terapia par</h5>}
         />
         <p>
-          <b>
-            Związek to coś więcej niż całość – to całość, której częściami są
-            również całości.
-          </b>{" "}
-          A każda całość to coś więcej niż tylko suma jej części. Czyli związek
-          to <b>całe Ja, całe Ty i jeszcze całe My</b>. Łatwo się w tym pogubić.
-          Na dodatek, aby dobrze funkcjonować, każda z tych całości wymaga
-          dbałości i uwagi. Kiedy zadbać o Ja a kiedy poświęcić się My? Kiedy Ty
-          jest ważniejsze od Ja?{" "}
-          <b>
-            Terapia pomaga rozplątać to, co splątane. Dostrzec każdy z elementów
-            oddzielnie i jako połączoną ze sobą całość.
-          </b>{" "}
-          Jej celem jest poprawa, czy wręcz umożliwienie prawidłowej komunikacji
-          między partnerami. Odszukanie źródeł kryzysu oraz znalezienie
-          rozwiązań umożliwiających jego przezwyciężenie.
+          <b>Związek to coś więcej niż całość – to całość, której częściami są
+          również całości.</b> A każda całość to coś więcej niż tylko suma jej
+          części. Czyli związek to <b>całe Ja, całe Ty i jeszcze całe My</b>. Łatwo się
+          w tym pogubić. Na dodatek, aby dobrze funkcjonować, każda z tych
+          całości wymaga dbałości i uwagi. Kiedy zadbać o Ja a kiedy poświęcić
+          się My? Kiedy Ty jest ważniejsze od Ja? <b>Terapia pomaga rozplątać to,
+          co splątane. Dostrzec każdy z elementów oddzielnie i jako połączoną ze
+          sobą całość.</b> Jej celem jest poprawa, czy wręcz umożliwienie
+          prawidłowej komunikacji między partnerami. Odszukanie źródeł kryzysu
+          oraz znalezienie rozwiązań umożliwiających jego przezwyciężenie.
         </p>
         <p>
           Terapia par to forma pomocy skierowana do przeżywających kryzys
@@ -365,15 +346,13 @@ export default function Offer() {
         <p>
           Podobnie jak w innych obszarach pracy, także i tu wykorzystuję
           różnorodne narzędzia, w tym{" "}
-          <a href="#offer-system" style={{ textDecoration: "underline" }}>
+          <Link href="#offer-system" style={{ textDecoration: "underline" }}>
             ustawienia systemowe
-          </a>
-          . Podstawę pracy stanowią zasady terapii SAS czyli{" "}
-          <b>
-            odnalezienie, w oparciu o wewnętrzny szacunek, akceptację i siłę,
-            zrozumienia samych siebie
-          </b>{" "}
-          i tego jakiego rodzaju wartością oraz czym jest związek z drugą osobą.
+          </Link>
+          . Podstawę pracy stanowią zasady terapii SAS czyli <b>odnalezienie, w
+          oparciu o wewnętrzny szacunek, akceptację i siłę, zrozumienia samych
+          siebie</b> i tego jakiego rodzaju wartością oraz czym jest związek z drugą
+          osobą.
         </p>
         <p>
           Spotkania trwają 1,5 h, odbywają się regularnie, zgodnie z
